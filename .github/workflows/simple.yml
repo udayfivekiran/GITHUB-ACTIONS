@@ -1,5 +1,5 @@
 name: Shell Commands
-on: [push,pull] #[] not required for single values
+on: [push]
 
 jobs:
   run-shell-command:
@@ -11,4 +11,6 @@ jobs:
         run: |
           node -v
           npm -v
+          git -v
+          lsb_release -a
           
