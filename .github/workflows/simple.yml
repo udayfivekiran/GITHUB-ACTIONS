@@ -11,6 +11,11 @@ jobs:
         run: |
           node -v
           npm -v
-          git -v
+          git --version
           lsb_release -a
+      - name: python Command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
           
