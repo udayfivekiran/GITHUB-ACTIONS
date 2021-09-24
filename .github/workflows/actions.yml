@@ -1,5 +1,5 @@
 name: Actions Workflow
-on: [push]
+on: [push,pull_request]
 
 jobs:
   run-github-actions:
@@ -17,7 +17,7 @@ jobs:
           echo "${{github.token}}"
           #git clone git@github:$GITHUB_REPOSITORY
           #git checkout $GITHUB_SHA
-          git clone git@github.com/udayfivekiran/ibmcognospackage
+          git clone git@github.com:udayfivekiran/ibmcognospackage
       - name: Checkout
         uses: actions/checkout@v1
       - name: List Files after checkout
