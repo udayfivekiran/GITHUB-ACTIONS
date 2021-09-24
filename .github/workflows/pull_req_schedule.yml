@@ -1,10 +1,15 @@
-nane: Schedule WF
+name: Schedule WF
 
 #on: [pull_request,push]
 #we can use object instead of array to add extra properties like assignment types.
 
-#crontab.guru
+
 on:
+  #post request to some url: https://api.github.com/repos/alialaa/github-actions-test/dispatches
+  #repository_dispatch:
+    
+    
+  #crontab.guru  
   schedule:
    - cron: "0/5 * * * *" #"0 12 * FEB MON"
    - cron: "0/6 * * * *"
