@@ -1,0 +1,24 @@
+nane: Schedule WF
+
+#on: [pull_request,push]
+#we can use object instead of array to add extra properties like assignment types.
+
+#crontab.guru
+on:
+  schedule:
+   - cron: "0/5 * * * *" #"0 12 * FEB MON"
+   - cron: "0/6 * * * *"
+  #push:
+  pull_request:
+    types: [closed,assigned,opened,reopened]
+  
+jobs:
+  run-github-actions:
+    runs-on: macos-latest
+    steps:
+      - name: List Files
+        run: |
+        ls -l
+        pwd
+        whoami
+        git --version
